@@ -1,22 +1,19 @@
 %define rbname xmms
 %define version 0.1.2
-%define release 2mdk
+%define release %mkrel 3
 
 Summary: XMMS bindings for Ruby
 Name: ruby-%{rbname}
 
 Version: %{version}
 Release: %{release}
-Group: Development/Other
+Group: Development/Ruby
 License: GPL
 URL: http://www.pablotron.org/software/xmms-ruby/
 Source0: http://www.pablotron.org/download/%{rbname}-ruby-%{version}.tar.bz2
 BuildRoot: %{_tmppath}/%{name}-%{version}-root
 BuildRequires: ruby-devel >= 1.6
 BuildRequires: xmms-devel >= 1.2.6
-
-%define ruby_libdir %(ruby -rrbconfig -e 'puts Config::CONFIG["sitelibdir"]')
-%define ruby_archdir %(ruby -rrbconfig -e 'puts Config::CONFIG["sitearchdir"]')
 
 %description
 XMMS bindings for Ruby. 
@@ -38,5 +35,5 @@ make DESTDIR=%{buildroot} install
 %files
 %defattr(-, root, root)
 %doc README COPYING ChangeLog doc
-%{ruby_archdir}/xmms.so
+%{ruby_sitearchdir}/xmms.so
 
