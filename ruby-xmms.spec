@@ -9,7 +9,7 @@ Version: %{version}
 Release: %{release}
 Group: Development/Ruby
 License: GPL
-URL: http://www.pablotron.org/software/xmms-ruby/
+URL: https://www.pablotron.org/software/xmms-ruby/
 Source0: http://www.pablotron.org/download/%{rbname}-ruby-%{version}.tar.bz2
 BuildRoot: %{_tmppath}/%{name}-%{version}-root
 BuildRequires: ruby-devel >= 1.6
