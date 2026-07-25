@@ -1,6 +1,6 @@
 %define rbname xmms
 %define version 0.1.2
-%define release %mkrel 7
+%define release 8
 
 Summary: XMMS bindings for Ruby
 Name: ruby-%{rbname}
